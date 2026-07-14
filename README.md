@@ -69,6 +69,10 @@ The application demonstrates full-stack web development using only core web tech
 ![User Profile](screenshots/user-profile.png)
 *Profile picture upload, edit profile and transaction history with pagination*
 
+### Login
+![Login](screenshots/login.png)
+*Login as normal user or damin
+
 ### Admin — Manage Products
 ![Admin Products](screenshots/admin-products.png)
 *Product search bar, paginated table and full add/edit/delete CRUD*
