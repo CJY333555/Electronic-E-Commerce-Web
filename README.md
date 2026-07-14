@@ -288,16 +288,16 @@ techmart/
 │ transactions │ │                       │ review_id PK│
 ├──────────────┤ │                    ┌──│ product_id  │
 │ trans_id  PK │ │                    │  │ user_id  FK │
-│ user_id   FK │─┘  ┌──────────────┐ │  │ rating      │
-│ items_json  │     │contact_msgs  │ │  │ comment     │
-│ total_amount│     ├──────────────┤ │  │ created_at  │
-│ address     │     │ message_id PK│ │  └─────────────┘
-│ purchased_at│     │ name         │ │
-└──────────────┘    │ email        │ │
-                    │ message      │ │
-                    │ is_read      │ │
-                    │ sent_at      │ │
-                    └──────────────┘ │
+│ user_id   FK │─┘  ┌──────────────┐  │  │ rating      │
+│ items_json   │    │contact_msgs  │  │  │ comment     │
+│ total_amount │    ├──────────────┤  │  │ created_at  │
+│ address      │    │ message_id PK│  │  └─────────────┘
+│ purchased_at │    │ name         │  │
+└──────────────┘    │ email        │  │
+                    │ message      │  │
+                    │ is_read      │  │
+                    │ sent_at      │ ——
+                    └──────────────┘ 
 ```
 
 ---
@@ -328,7 +328,7 @@ techmart/
 
 <div align="center">
 
-**UECS2094 / UECS2194 / EECS2194 Web Application Development**
+**Web Application Development**
 Universiti Tunku Abdul Rahman (UTAR) · Sungai Long Campus
 
 </div>
