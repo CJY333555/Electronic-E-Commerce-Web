@@ -1,0 +1,45 @@
+# =========================================================
+# TechShop Leap — .gitignore
+# =========================================================
+
+# ---- Uploaded user profile pictures (generated at runtime) ----
+assets/images/profile_pics/
+
+# ---- Sensitive config ----
+config.php
+.env
+
+# ---- OS generated files ----
+.DS_Store
+.DS_Store?
+._*
+Thumbs.db
+ehthumbs.db
+desktop.ini
+
+# ---- IDE / Editor folders ----
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+nbproject/
+
+# ---- PHP logs and error files ----
+*.log
+error_log
+php_errorlog
+
+# ---- WAMPServer local config leftovers ----
+.htaccess.bak
+php.ini.bak
+
+# ---- Zip archives ----
+*.zip
+*.tar.gz
+*.rar
+
+# ---- Node / Composer (future-proofing) ----
+node_modules/
+vendor/
+composer.lock
+npm-debug.log*
