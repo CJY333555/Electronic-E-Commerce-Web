@@ -1,0 +1,51 @@
+/* =========================================================
+   contact.css — Contact Page Layout
+   Loaded on: contact.php
+   ========================================================= */
+
+/* ---- Two-column contact layout ---- */
+.contact-wrap {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    max-width: 1100px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+/* ---- Info / form card ---- */
+.contact-info {
+    background: var(--white);
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+.contact-info h2 { margin-bottom: 16px; }
+.contact-info p  { margin-bottom: 12px; line-height: 1.7; }
+
+/* ---- Embedded Google Map ---- */
+.contact-info iframe {
+    width: 100%;
+    height: 220px;
+    border: 0;
+    border-radius: 8px;
+    margin-top: 16px;
+}
+
+/* ---- Social links row ---- */
+.social-links {
+    display: flex;
+    gap: 12px;
+    margin-top: 16px;
+}
+.social-links a {
+    background: var(--light-bg);
+    padding: 8px 14px;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 500;
+    transition: background .15s;
+}
+.social-links a:hover {
+    background: var(--border);
+}

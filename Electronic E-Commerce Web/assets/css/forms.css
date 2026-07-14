@@ -1,0 +1,69 @@
+/* =========================================================
+   forms.css — All Form Wrappers and Inputs
+   Loaded on: login.php, register.php, profile.php,
+              contact.php, admin/products.php
+   ========================================================= */
+
+/* ---- Form wrapper card ---- */
+.form-wrap {
+    max-width: 480px;
+    margin: 50px auto;
+    background: var(--white);
+    padding: 36px;
+    border-radius: 12px;
+    box-shadow: 0 2px 14px rgba(0, 0, 0, 0.06);
+}
+.form-wrap.wide { max-width: 700px; }   /* Used on admin add/edit form */
+
+.form-wrap h1 {
+    margin-bottom: 24px;
+    font-size: 24px;
+    text-align: center;
+}
+
+/* ---- Form groups ---- */
+.form-group { margin-bottom: 18px; }
+
+.form-group label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.form-group input,
+.form-group textarea,
+.form-group select {
+    width: 100%;
+    padding: 11px 14px;
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    font-size: 14px;
+    font-family: inherit;
+    transition: border-color .15s;
+}
+.form-group input:focus,
+.form-group textarea:focus,
+.form-group select:focus {
+    outline: none;
+    border-color: var(--primary);
+}
+.form-group input:disabled {
+    background: #f3f4f6;
+    cursor: not-allowed;
+    color: #6b7280;
+}
+
+/* ---- Inline validation error ---- */
+.form-error {
+    color: var(--danger);
+    font-size: 13px;
+    margin-top: 4px;
+}
+
+/* ---- Footer text (e.g. "Don't have an account? Register") ---- */
+.form-footer-text {
+    text-align: center;
+    margin-top: 16px;
+    font-size: 14px;
+}

@@ -1,0 +1,202 @@
+/* =========================================================
+   home.css — Carousel, Search Bar, Featured Sections
+   Loaded on: index.php
+   ========================================================= */
+
+/* ---- Carousel ---- */
+.hero-carousel {
+    position: relative;
+    background: linear-gradient(135deg, #0f1f5c 0%, #1a3fc4 100%);
+    overflow: hidden;
+    min-height: 420px;
+    display: flex;
+    align-items: center;
+}
+.carousel-track { width: 100%; }
+
+.carousel-slide {
+    display: none;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 50px 80px;
+    align-items: center;
+    gap: 40px;
+    perspective: 1000px;
+}
+.carousel-slide.active {
+    display: flex;
+    animation: flipInY 0.5s ease forwards;
+}
+@keyframes flipInY {
+    from { transform: rotateY(90deg); opacity: 0; }
+    to   { transform: rotateY(0deg);  opacity: 1; }
+}
+
+/* Slide text (left) */
+.slide-content { flex: 1; color: var(--white); }
+.slide-category {
+    display: inline-block;
+    background: rgba(255,255,255,0.15);
+    color: var(--white);
+    font-size: 11px; font-weight: 700;
+    padding: 4px 12px; border-radius: 20px;
+    letter-spacing: 1px; text-transform: uppercase;
+    margin-bottom: 14px;
+}
+.slide-content h2   { font-size: 34px; font-weight: 800; margin-bottom: 12px; line-height: 1.2; }
+.slide-content p    { font-size: 15px; opacity: .85; margin-bottom: 16px; max-width: 400px; line-height: 1.6; }
+.slide-price        { font-size: 26px; font-weight: 700; color: var(--accent); margin-bottom: 22px; }
+.slide-content .btn { background: var(--white); color: var(--primary); font-weight: 700; padding: 12px 28px; }
+.slide-content .btn:hover { background: var(--accent); color: var(--white); }
+
+/* Slide image (right) */
+.slide-image {
+    flex: 0 0 340px;
+    display: flex; align-items: center; justify-content: center;
+}
+.slide-image img {
+    max-height: 300px; max-width: 320px;
+    object-fit: contain;
+    filter: drop-shadow(0 20px 40px rgba(0,0,0,0.4));
+    border-radius: 12px;
+}
+
+/* Prev / Next buttons */
+.carousel-btn {
+    position: absolute; top: 50%; transform: translateY(-50%);
+    background: rgba(255,255,255,0.15);
+    border: 2px solid rgba(255,255,255,0.3);
+    color: var(--white);
+    width: 44px; height: 44px; border-radius: 50%;
+    font-size: 22px; cursor: pointer;
+    transition: background .2s;
+    display: flex; align-items: center; justify-content: center;
+}
+.carousel-btn:hover { background: rgba(255,255,255,0.3); }
+.carousel-btn.prev  { left: 16px; }
+.carousel-btn.next  { right: 16px; }
+
+/* Dots */
+.carousel-dots {
+    position: absolute; bottom: 18px;
+    left: 50%; transform: translateX(-50%);
+    display: flex; gap: 8px;
+}
+.carousel-dot {
+    width: 10px; height: 10px; border-radius: 50%;
+    background: rgba(255,255,255,0.35);
+    cursor: pointer; transition: background .2s, transform .2s;
+    border: none;
+}
+.carousel-dot.active { background: var(--white); transform: scale(1.3); }
+
+/* =========================================================
+   HOME SEARCH BAR SECTION
+   ========================================================= */
+.home-search-section {
+    background: var(--white);
+    padding: 36px 20px;
+    border-bottom: 1px solid var(--border);
+}
+.home-search-inner {
+    max-width: 680px;
+    margin: 0 auto;
+    text-align: center;
+}
+.search-label {
+    font-size: 14px;
+    font-weight: 600;
+    color: #6b7280;
+    letter-spacing: .5px;
+    text-transform: uppercase;
+    margin-bottom: 14px;
+}
+
+/* The bar itself: input + icon button */
+.home-search-bar {
+    display: flex;
+    align-items: center;
+    background: var(--light-bg);
+    border: 2px solid var(--border);
+    border-radius: 50px;          /* pill shape */
+    overflow: hidden;
+    transition: border-color .2s, box-shadow .2s;
+}
+.home-search-bar:focus-within {
+    border-color: var(--primary);
+    box-shadow: 0 0 0 3px rgba(45,95,255,0.12);
+}
+.home-search-input {
+    flex: 1;
+    padding: 14px 22px;
+    border: none;
+    background: transparent;
+    font-size: 15px;
+    font-family: inherit;
+    color: var(--dark);
+    outline: none;
+}
+.home-search-input::placeholder { color: #9ca3af; }
+
+/* Icon button on the right */
+.home-search-btn {
+    padding: 0 22px;
+    height: 52px;
+    background: var(--primary);
+    border: none;
+    cursor: pointer;
+    display: flex; align-items: center; justify-content: center;
+    transition: background .2s;
+    flex-shrink: 0;
+}
+.home-search-btn:hover { background: var(--primary-dark); }
+.search-icon-img {
+    width: 22px; height: 22px;
+    object-fit: contain;
+    filter: brightness(0) invert(1);   /* makes PNG white on the blue button */
+}
+.search-icon-fallback { font-size: 18px; color: var(--white); }
+
+/* =========================================================
+   FEATURED CATEGORY SECTIONS
+   ========================================================= */
+.featured-section { padding: 46px 20px 10px; max-width: 1100px; margin: 0 auto; }
+
+.category-header {
+    display: flex; justify-content: space-between; align-items: center;
+    margin-bottom: 20px; padding-bottom: 10px;
+    border-bottom: 2px solid var(--border);
+}
+.category-header h2 { font-size: 22px; font-weight: 700; }
+.see-all-btn {
+    font-size: 14px; font-weight: 600; color: var(--primary);
+    display: flex; align-items: center; gap: 4px;
+    transition: gap .2s;
+}
+.see-all-btn:hover { gap: 8px; color: var(--primary-dark); }
+
+/* =========================================================
+   RESPONSIVE (home-specific)
+   ========================================================= */
+@media (max-width: 900px) {
+    .carousel-slide { padding: 36px 60px; }
+    .slide-image    { flex: 0 0 260px; }
+    .slide-content h2 { font-size: 26px; }
+}
+@media (max-width: 640px) {
+    .carousel-slide {
+        flex-direction: column-reverse;
+        padding: 28px 20px;
+        text-align: center;
+    }
+    .slide-image { flex: none; }
+    .slide-image img { max-height: 180px; }
+    .slide-content h2 { font-size: 22px; }
+    .slide-content p  { margin: 0 auto 16px; }
+    .carousel-btn { display: none; }
+
+    .home-search-section { padding: 26px 16px; }
+    .home-search-input   { padding: 12px 16px; font-size: 14px; }
+    .home-search-btn     { height: 46px; padding: 0 16px; }
+    .search-icon-img     { width: 18px; height: 18px; }
+}

@@ -1,0 +1,61 @@
+/* =========================================================
+   responsive.css — All @media Queries (loaded last)
+   ========================================================= */
+
+/* ----------- Tablet (≤ 900px) ----------- */
+@media (max-width: 900px) {
+    .carousel-slide { padding: 36px 60px; }
+    .slide-image     { flex: 0 0 260px; }
+    .slide-content h2 { font-size: 26px; }
+
+    .product-grid    { grid-template-columns: repeat(2, 1fr); }
+    .footer-content  { grid-template-columns: 1fr 1fr; }
+
+    .user-profile-layout  { grid-template-columns: 1fr; }
+    .transactions-card    { grid-column: auto; }
+    .admin-profile-layout { grid-template-columns: 1fr; }
+    .admin-profile-card   { position: static; }
+}
+
+/* ----------- Mobile (≤ 640px) ----------- */
+@media (max-width: 640px) {
+    .nav-toggle { display: block; }
+    .main-nav {
+        display: none; position: absolute;
+        top: 100%; left: 0; right: 0;
+        background: var(--white);
+        box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+        z-index: 999;
+    }
+    .main-nav.open { display: block; }
+    .main-nav ul   { flex-direction: column; align-items: flex-start; padding: 16px 24px; gap: 14px; }
+
+    /* Carousel stacks vertically on mobile */
+    .carousel-slide {
+        flex-direction: column-reverse;
+        padding: 30px 20px;
+        text-align: center;
+    }
+    .slide-image { flex: none; }
+    .slide-image img { max-height: 180px; }
+    .slide-content h2 { font-size: 22px; }
+    .carousel-btn { display: none; }
+
+    .product-grid { grid-template-columns: repeat(2, 1fr); gap: 14px; }
+
+    .form-wrap { margin: 24px 14px; padding: 22px; }
+    .contact-wrap { grid-template-columns: 1fr; }
+    .footer-content { grid-template-columns: 1fr; text-align: center; }
+
+    /* Table → card layout on mobile */
+    table, thead, tbody, th, td, tr { display: block; }
+    thead tr { position: absolute; top: -9999px; left: -9999px; }
+    tr { margin-bottom: 12px; border: 1px solid var(--border); border-radius: 8px; }
+    td { border: none; position: relative; padding-left: 45%; min-height: 32px; }
+    td::before { content: attr(data-label); position: absolute; left: 12px; font-weight: 600; color: #6b7280; font-size: 12px; }
+
+    .user-profile-layout  { grid-template-columns: 1fr; }
+    .admin-profile-layout { grid-template-columns: 1fr; }
+
+    .modal-box { padding: 22px 18px; }
+}

@@ -1,0 +1,77 @@
+/* =========================================================
+   details.css — Product Details Page, Reviews Section
+   Loaded on: product_details.php
+   ========================================================= */
+
+/* ---- Details wrapper ---- */
+.details-wrap {
+    max-width: 900px;
+    margin: 40px auto;
+    background: var(--white);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 2px 14px rgba(0, 0, 0, 0.06);
+}
+.details-wrap img {
+    width: 100%;
+    height: 320px;
+    object-fit: cover;
+    background: #d8dee9;
+}
+
+/* ---- Details body ---- */
+.details-body { padding: 30px; }
+.details-body h1 { margin-bottom: 6px; }
+
+.details-meta-row {
+    display: flex;
+    gap: 24px;
+    flex-wrap: wrap;
+    margin: 16px 0;
+    font-size: 20px;
+}
+
+.details-body .desc { margin: 20px 0; }
+.details-body .desc h3 { margin-bottom: 8px; }
+
+/* ---- Reviews section ---- */
+.reviews-section {
+    margin-top: 30px;
+    border-top: 1px solid var(--border);
+    padding-top: 24px;
+}
+.reviews-section h3 { margin-bottom: 16px; }
+
+/* Individual review card */
+.review-card {
+    background: var(--light-bg);
+    border-radius: 8px;
+    padding: 16px 18px;
+    margin-bottom: 14px;
+}
+.review-card-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 6px;
+}
+.review-author  { font-weight: 600; margin-right: 8px; }
+.review-rating  { color: var(--accent); font-size: 15px; letter-spacing: 1px; }
+.review-date    { color: #9ca3af; font-size: 12px; }
+.review-comment { font-size: 14px; color: #374151; }
+.review-delete  { margin-top: 8px; }
+
+/* Star rating selector (review submission form) */
+.star-select {
+    display: flex;
+    flex-direction: row-reverse;   /* highest star on left visually */
+    gap: 6px;
+    font-size: 26px;
+}
+.star-select label { cursor: pointer; color: #d1d5db; transition: color .1s; }
+.star-select input { display: none; }
+
+/* Highlight selected star and all stars to its left */
+.star-select input:checked ~ label,
+.star-select label:hover,
+.star-select label:hover ~ label { color: var(--accent); }
