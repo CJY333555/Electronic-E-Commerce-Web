@@ -3,7 +3,7 @@
 <footer class="site-footer">
     <div class="footer-content">
         <div class="footer-col">
-            <h3>TechMart</h3>
+            <h3>TechShop Leap</h3>
             <p>Your trusted online store for laptops, smartphones, audio gear, monitors, and accessories at honest prices.</p>
         </div>
         <div class="footer-col">
@@ -20,7 +20,7 @@
         </div>
     </div>
     <div class="footer-bottom">
-        <p>&copy; <?php echo date("Y"); ?> TechMart. All rights reserved. | UECS2094/UECS2194/EECS2194 Group Assignment</p>
+        <p>&copy; <?php echo date("Y"); ?> Electronic E-Commerce Web Application. All rights reserved.</p>
     </div>
 </footer>
 
