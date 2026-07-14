@@ -1,7 +1,7 @@
-# TechMart – Electronics Online Store
+# TechShop – Electronics Online Store
 
 A dynamic e-commerce web application built with **HTML, CSS, JavaScript, PHP, and MySQL** for the
-UECS2094/UECS2194/EECS2194 Web Application Development group assignment.
+Web Application Development.
 
 No external frameworks or libraries are used (no Bootstrap, jQuery, React, Laravel, etc.) —
 everything is built with vanilla HTML/CSS/JS/PHP/MySQL.
@@ -69,7 +69,7 @@ Users can delete their own reviews; admins can delete any review.
      $DB_HOST = "localhost";
      $DB_USER = "root";
      $DB_PASS = "";       // change if your MySQL root has a password
-     $DB_NAME = "techmart";
+     $DB_NAME = "Electronic E-Commerce Web";
      ```
 
 5. **Run the project**
