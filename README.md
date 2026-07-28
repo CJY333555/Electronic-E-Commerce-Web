@@ -71,7 +71,7 @@ The application demonstrates full-stack web development using only core web tech
 
 ### Login
 ![Login](screenshots/login.png)
-*Login as normal user or damin
+*Login as normal user or admin*
 
 ### Admin — Manage Products
 ![Admin Products](screenshots/admin-products.png)
